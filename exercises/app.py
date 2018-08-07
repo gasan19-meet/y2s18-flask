@@ -3,8 +3,14 @@ app = Flask(__name__)
 
 @app.route('/')
 def home_page():
-	return render_template("index.html")
-	
+	likes_beer_pong=False
+	senders=["mtvjesse","kyle","905 shooter","holden cuming"]
+	return render_template(
+		"index.html",
+		senders=senders,
+		likes_beer_pong = likes_beer_pong
+		)
+
 
     
 

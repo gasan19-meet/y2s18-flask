@@ -6,8 +6,23 @@
 
 </head>
 <body>
-<h1>beer pong</h1>
+<h1>favorite sport is:beer pong</h1>
+
 <p>it is my favorite sport bec its fun and keeps me hydrated</p>
+{%if likes_beer_pong==True%}
+
+<P>My favorite beer pong players are:</P>
+<ul>
+
+	{%for senders in senders%}
+
+	<li> {{senders}} </li>
+	{% endfor%}
+	{%else%}
+		<p>I love pong because it gets everyone fired up for the night</p>
+</ul>
+{%endif%}
+
 
 </body>
 </html>
